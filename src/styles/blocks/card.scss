@@ -1,0 +1,71 @@
+.card {
+  flex-basis: 30%;
+  padding: 1.5vh;
+  margin: 1vh;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5vh;
+  text-align: center;
+  border: 0.2vh solid $border-color;
+  border-radius: 1.5vh;
+  cursor: pointer;
+  will-change: transform;
+  transition: all 0.2s ease-in;
+
+  @include on-tablet {
+    flex-basis: 45%;
+  }
+
+  @include on-mobile {
+    flex-basis: 90%;
+  }
+
+  &:hover {
+    background-color: $white-color;
+    transform: scale(1.05);
+    transition: all 0.2s ease-out;
+  }
+
+  &__title {
+    font-size: 2.5vh;
+    color: $primary-color;
+  }
+
+  &__price {
+    font-size: 2vh;
+
+    span {
+      font-size: 1.5vh;
+    }
+  }
+
+  &__features {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__feature-item {
+    display: flex;
+    gap: 0.5vh;
+    margin: 1vh 0;
+
+    .checkmark {
+      color: $green-color;
+
+      &::before {
+        content: "✔";
+      }
+    }
+
+    .cross {
+      color: $orange-color;
+
+      &::before {
+        content: "✘";
+      }
+    }
+  }
+}

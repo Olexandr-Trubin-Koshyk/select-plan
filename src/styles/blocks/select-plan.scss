@@ -1,0 +1,70 @@
+.select-plan {
+  margin-top: 1.5vh;
+
+  &__title {
+    font-size: 3vh;
+    padding: 1.5vh;
+    color: $primary-color;
+  }
+
+  &__billing-period {
+    display: flex;
+    flex-direction: column;
+    gap: 1vh;
+    margin: 1vh;
+    align-self: flex-end;
+  }
+
+  &__billing-toggler {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1vh;
+    font-size: 2vh;
+    color: $dark-grey-color;
+    cursor: pointer;
+
+    @include no-text-select;
+  }
+
+  &__billing-selected-period {
+    width: 8vh;
+    align-self: flex-end;
+    font-size: 1.5vh;
+    line-height: 2.5vh;
+    font-weight: bold;
+    color: $primary-color;
+    text-transform: uppercase;
+    text-align: start;
+    transition: all 0.3s ease;
+
+    &--monthly {
+      &::after {
+        content: "Monthly";
+        color: $green-color;
+      }
+    }
+    &--yearly {
+      &::after {
+        content: "Yearly";
+        color: $primary-color;
+      }
+    }
+  }
+
+  &__plans {
+    width: 100%;
+    margin: 2vh 0;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    @include on-tablet {
+      justify-content: space-evenly;
+    }
+
+    @include on-mobile {
+      justify-content: center;
+    }
+  }
+}

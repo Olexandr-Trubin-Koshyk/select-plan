@@ -56,5 +56,119 @@ export const avialiblePlans = [
         isAvialible: true,
       },
     ],
+  }, {
+    id: 'dummy-test-id-3',
+    name: 'Premium',
+    monthPrice: 9.99,
+    yearPrice: 99.99,
+    features: [
+      {
+        featureName: 'Feature 1',
+        isAvialible: true,
+      },
+      {
+        featureName: 'Feature 2',
+        isAvialible: true,
+      },
+      {
+        featureName: 'Feature 3',
+        isAvialible: true,
+      },
+    ],
+  }, {
+    id: 'dummy-test-id-4',
+    name: 'Premium',
+    monthPrice: 9.99,
+    yearPrice: 99.99,
+    features: [
+      {
+        featureName: 'Feature 1',
+        isAvialible: false,
+      },
+      {
+        featureName: 'Feature 2',
+        isAvialible: true,
+      },
+      {
+        featureName: 'Feature 3',
+        isAvialible: true,
+      },
+    ],
+  }, {
+    id: 'dummy-test-id-3',
+    name: 'Premium',
+    monthPrice: 9.99,
+    yearPrice: 99.99,
+    features: [
+      {
+        featureName: 'Feature 1',
+        isAvialible: true,
+      },
+      {
+        featureName: 'Feature 2',
+        isAvialible: true,
+      },
+      {
+        featureName: 'Feature 3',
+        isAvialible: true,
+      },
+    ],
+  }, {
+    id: 'dummy-test-id-4',
+    name: 'Premium',
+    monthPrice: 9.99,
+    yearPrice: 99.99,
+    features: [
+      {
+        featureName: 'Feature 1',
+        isAvialible: false,
+      },
+      {
+        featureName: 'Feature 2',
+        isAvialible: true,
+      },
+      {
+        featureName: 'Feature 3',
+        isAvialible: true,
+      },
+    ],
+  }, {
+    id: 'dummy-test-id-3',
+    name: 'Premium',
+    monthPrice: 9.99,
+    yearPrice: 99.99,
+    features: [
+      {
+        featureName: 'Feature 1',
+        isAvialible: true,
+      },
+      {
+        featureName: 'Feature 2',
+        isAvialible: true,
+      },
+      {
+        featureName: 'Feature 3',
+        isAvialible: true,
+      },
+    ],
+  }, {
+    id: 'dummy-test-id-4',
+    name: 'Premium',
+    monthPrice: 9.99,
+    yearPrice: 99.99,
+    features: [
+      {
+        featureName: 'Feature 1',
+        isAvialible: false,
+      },
+      {
+        featureName: 'Feature 2',
+        isAvialible: true,
+      },
+      {
+        featureName: 'Feature 3',
+        isAvialible: true,
+      },
+    ],
   },
 ];

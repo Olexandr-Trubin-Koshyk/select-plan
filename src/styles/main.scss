@@ -1,27 +1,11 @@
-@import "reset";
 @import "utils";
 @import "fonts";
 @import "typography";
 
-@import "./select-plan/select-plan.scss";
+@import "reset";
+@import "normalize";
+
+@import "./blocks/select-plan.scss";
+@import "./blocks/card.scss";
 @import "./ui/toggle.scss";
 @import "./ui/button.scss";
-
-html {
-  font-family: "Roboto", sans-serif;
-}
-
-body {
-  display: flex;
-  justify-content: center;
-  width: 100%;
-  background: $gray-color;
-}
-
-section {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  width: 100%;
-  max-width: 1024px;
-}

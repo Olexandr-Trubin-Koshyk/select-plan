@@ -2,31 +2,31 @@ export const generatePricingPlanElement = (plan) => {
   const { name, id, monthPrice, features } = plan;
   const planContainer = document.createElement('div');
 
-  planContainer.className = 'select-plan__pricing-plan';
+  planContainer.className = 'card';
   planContainer.id = id;
 
   const title = document.createElement('h2');
 
-  title.className = 'select-plan__plan-title';
+  title.className = 'card__title';
   title.textContent = name;
 
   const priceElement = document.createElement('p');
 
-  priceElement.className = 'select-plan__price';
+  priceElement.className = 'card__price';
   priceElement.innerHTML = `$${monthPrice}<span>/month</span>`;
 
   const featureList = document.createElement('ul');
 
-  featureList.className = 'select-plan__features';
+  featureList.className = 'card__features';
 
   features.forEach(feature => {
     const featureItem = document.createElement('li');
 
-    featureItem.className = 'select-plan__feature-item';
+    featureItem.className = 'card__feature-item';
 
     const featureStatus = document.createElement('span');
 
-    featureStatus.className = `select-plan__feature-status
+    featureStatus.className = `card__feature-status
       ${feature.isAvialible ? 'checkmark' : 'cross'}`;
 
     const featureText = document.createTextNode(feature.featureName);
@@ -41,6 +41,14 @@ export const generatePricingPlanElement = (plan) => {
 
   signUpButton.className = 'button';
   signUpButton.textContent = 'Sign Up';
+
+  signUpButton.onclick = () => {
+    // eslint-disable-next-line no-console
+    console.log('Selected plan info: ', plan);
+
+    // eslint-disable-next-line no-console
+    console.log('Selected period: month');
+  };
 
   planContainer.appendChild(title);
   planContainer.appendChild(priceElement);
@@ -61,7 +69,7 @@ export const createPlanCards = (plansArray) => {
 };
 
 export const changePriceByBillingPeriod = (billingPeriod, plansArr) => {
-  const cards = document.querySelectorAll('.select-plan__pricing-plan');
+  const cards = document.querySelectorAll('.card');
 
   cards.forEach(card => {
     const planId = card.id;
@@ -69,12 +77,22 @@ export const changePriceByBillingPeriod = (billingPeriod, plansArr) => {
     if (planId && plansArr.find(plan => plan.id === planId)) {
       const currentPlan = plansArr.find(plan => plan.id === planId);
 
-      const cardPriceEl = card.querySelector('.select-plan__price');
+      const cardPriceEl = card.querySelector('.card__price');
 
       cardPriceEl.innerHTML = `${billingPeriod === 'month'
         ? `$${currentPlan.monthPrice}<span>/month</span>`
         : `$${currentPlan.yearPrice}<span>/year</span>`
       }`;
+
+      const signUpButton = card.querySelector('.button');
+
+      signUpButton.onclick = () => {
+        // eslint-disable-next-line no-console
+        console.log('Selected plan info: ', currentPlan);
+
+        // eslint-disable-next-line no-console
+        console.log(`Selected period: ${billingPeriod}`);
+      };
     }
   });
 };
