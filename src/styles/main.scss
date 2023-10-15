@@ -3,6 +3,14 @@
 @import "fonts";
 @import "typography";
 
+@import "./select-plan/select-plan.scss";
+@import "./ui/toggle.scss";
+@import "./ui/button.scss";
+
+html {
+  font-family: "Roboto", sans-serif;
+}
+
 body {
   display: flex;
   justify-content: center;

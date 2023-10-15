@@ -10,8 +10,14 @@
     <section class="select-plan">
       <h1 class="select-plan__title">Select your plan</h1>
       <div class="select-plan__billing-period">
-        <input type="checkbox" id="billingToggle">
-        <span id="billing-period-text" class="select-plan__text monhtly"> billing period</span>
+        <label class="select-plan__billing-toggler">
+          Toggle to change billing period
+          <input
+            type="checkbox"
+            id="billingToggle"
+            class="toggle"
+          >
+        </label>
       </div>
       <div class="select-plan__plans">
         <div class="select-plan__pricing-plan">
@@ -31,7 +37,7 @@
               Feature 3
             </li>
           </ul>
-          <button href="#" class="select-plan_sign-up-btn">Sign Up</button>
+          <div class="button">Sign Up</div>
         </div>
         <div class="select-plan__pricing-plan">
           <h2 class="select-plan__plan-title">Standard</h2>
@@ -50,7 +56,7 @@
               Feature 3
             </li>
           </ul>
-          <button href="#" class="select-plan_sign-up-btn">Sign Up</button>
+          <div class="button">Sign Up</div>
         </div>
         <div class="select-plan__pricing-plan">
           <h2 class="select-plan__plan-title">Premium</h2>
@@ -69,7 +75,7 @@
               Feature 3
             </li>
           </ul>
-          <button href="#" class="select-plan_sign-up-btn">Sign Up</button>
+          <div class="button">Sign Up</div>
         </div>
       </div>
     </section>

@@ -1,0 +1,15 @@
+.button {
+  display: inline-block;
+  background-color: $primary-color;
+  color: white;
+  padding: 1vh 2vh;
+  text-decoration: none;
+  border-radius: 0.5vh;
+  margin-top: 1vh;
+  transition: background-color 0.3s ease-in;
+
+  &:hover {
+    background-color: darken($primary-color, 20%);
+    transition: background-color 0.3s ease-out;
+  }
+}
