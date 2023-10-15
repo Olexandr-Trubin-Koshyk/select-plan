@@ -8,7 +8,7 @@
   </head>
   <body>
     <section class="select-plan">
-      <h1 class="select-plan__title">Select your plan</h1>
+      <h1 class="select-plan__title select-plan__title--monthly">Select your plan</h1>
       <div class="select-plan__billing-period">
         <label class="select-plan__billing-toggler">
           Toggle to change billing period
@@ -17,66 +17,10 @@
             id="billingToggle"
             class="toggle"
           >
+          <span id="selectBillingPeriod" class="select-plan__billing-selected-period select-plan__billing-selected-period--monthly"></span>
         </label>
       </div>
-      <div class="select-plan__plans">
-        <div class="select-plan__pricing-plan">
-          <h2 class="select-plan__plan-title">Basic</h2>
-          <p class="select-plan__price">$9.99<span>/month</span></p>
-          <ul class="select-plan__features">
-            <li class="select-plan__feature-item">
-              <span class="select-plan__feature-status checkmark"></span>
-              Feature 1
-            </li>
-            <li class="select-plan__feature-item">
-              <span class="select-plan__feature-status cross"></span>
-              Feature 2
-            </li>
-            <li class="select-plan__feature-item">
-              <span class="select-plan__feature-status cross"></span>
-              Feature 3
-            </li>
-          </ul>
-          <div class="button">Sign Up</div>
-        </div>
-        <div class="select-plan__pricing-plan">
-          <h2 class="select-plan__plan-title">Standard</h2>
-          <p class="select-plan__price">$9.99<span>/month</span></p>
-          <ul class="select-plan__features">
-            <li class="select-plan__feature-item">
-              <span class="select-plan__feature-status checkmark"></span>
-              Feature 1
-            </li>
-            <li class="select-plan__feature-item">
-              <span class="select-plan__feature-status checkmark"></span>
-              Feature 2
-            </li>
-            <li class="select-plan__feature-item">
-              <span class="select-plan__feature-status cross"></span>
-              Feature 3
-            </li>
-          </ul>
-          <div class="button">Sign Up</div>
-        </div>
-        <div class="select-plan__pricing-plan">
-          <h2 class="select-plan__plan-title">Premium</h2>
-          <p class="select-plan__price">$9.99<span>/month</span></p>
-          <ul class="select-plan__features">
-            <li class="select-plan__feature-item">
-              <span class="select-plan__feature-status checkmark"></span>
-              Feature 1
-            </li>
-            <li class="select-plan__feature-item">
-              <span class="select-plan__feature-status checkmark"></span>
-              Feature 2
-            </li>
-            <li class="select-plan__feature-item">
-              <span class="select-plan__feature-status checkmark"></span>
-              Feature 3
-            </li>
-          </ul>
-          <div class="button">Sign Up</div>
-        </div>
+      <div class="select-plan__plans" id="plansContainer">
       </div>
     </section>
 

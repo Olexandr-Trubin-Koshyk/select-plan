@@ -7,7 +7,7 @@
   outline: none;
   border-radius: 2vh;
   box-shadow: inset 0 0 0.5vh rgba(255, 0, 0, 0.2);
-  transition: 0.7s;
+  transition: 0.4s;
   cursor: pointer;
 
   &::before {
@@ -21,7 +21,7 @@
     background: $white-color;
     transform: scale(1.1);
     box-shadow: 0 0.2vh 0.5vh rgba(0, 0, 0, 0.2);
-    transition: all 0.5s ease-in;
+    transition: all 0.3s ease-in;
   }
 
   &:checked {

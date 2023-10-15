@@ -6,6 +6,9 @@
   }
 
   &__billing-period {
+    display: flex;
+    flex-direction: column;
+    gap: 1vh;
     margin: 1vh;
     align-self: flex-end;
   }
@@ -13,10 +16,38 @@
   &__billing-toggler {
     display: flex;
     align-items: center;
+    justify-content: center;
     gap: 1vh;
     font-size: 2vh;
     color: $dark-grey-color;
     cursor: pointer;
+
+    @include no-text-select;
+  }
+
+  &__billing-selected-period {
+    width: 8vh;
+    align-self: flex-end;
+    font-size: 1.5vh;
+    line-height: 2.5vh;
+    font-weight: bold;
+    color: $primary-color;
+    text-transform: uppercase;
+    text-align: start;
+    transition: all 0.3s ease;
+
+    &--monthly {
+      &::after {
+        content: "Monthly";
+        color: $secondary-color;
+      }
+    }
+    &--yearly {
+      &::after {
+        content: "Yearly";
+        color: $primary-color;
+      }
+    }
   }
 
   &__plans {
@@ -26,6 +57,10 @@
   }
 
   &__pricing-plan {
+    max-width: 30%;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5vh;
     text-align: center;
     border: 0.2vh solid $border-color;
     border-radius: 1.5vh;
@@ -50,7 +85,6 @@
 
   &__price {
     font-size: 2vh;
-    margin: 1vh 0;
 
     span {
       font-size: 1.5vh;
@@ -60,10 +94,14 @@
   &__features {
     list-style: none;
     padding: 0;
-
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 
   &__feature-item {
+    display: flex;
+    gap: 0.5vh;
     margin: 1vh 0;
 
     .checkmark {
